@@ -670,7 +670,8 @@ input {
 }
 
 .bg-dark {
-  background: #001d4c !important;
+  background: #EFF31A!important;
+  color:black !important;
 }
 
 .bg-dark-hard {
@@ -685,8 +686,8 @@ input {
 }
 
 .btn-theme {
-  background-color: #3bcf93;
-  color: #ffffff !important;
+  background-color: rgba(239, 243, 26, 10);
+  color: black !important;
   border: 2px solid #3bcf93;
 }
 
@@ -726,7 +727,7 @@ input {
 
 .btn-theme.effect:hover, 
 .btn-theme.effect:focus {
-  background: #3bcf93 none repeat scroll 0 0;
+  background: #339337 none repeat scroll 0 0;
   border: 2px solid #3bcf93;
   color: #ffffff;
 }
@@ -747,7 +748,7 @@ input {
 .bg-theme a.btn-theme.btn:hover,
 .bg-theme a.btn-theme.btn:focus {
   border: 2px solid #ffffff;
-  color: #ffffff;
+  color: black;
 }
 
 /* Gradient Button */
@@ -6964,3 +6965,89 @@ footer.demo .copyright {
     border-radius: 30px;
     box-shadow: 0 0 10px #cccccc;
 }
+.login-form {
+  width: 100%;
+  padding: 2em;
+  position: relative;
+  background: rgba(black, .15);
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: -2px; left: 0;
+    height: 2px; width: 100%;
+    
+    background: linear-gradient(
+      to right,
+      $green-dark,
+      $green-light
+    );    
+  }
+  
+  @media screen and (min-width: 600px) {
+    width: 50vw;
+    max-width: 15em;
+  }
+}
+
+  .flex-row {
+    display: flex;
+    margin-bottom: 1em;
+  }
+  
+  .lf--label {
+    width: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: $gray-light;
+    cursor: pointer;
+  }
+  .lf--input {
+    flex: 1;
+    padding: 1em;
+    border: 0;
+    color: $gray;
+    font-size: 1rem;
+
+    &:focus {
+      outline: none;
+      transition: transform .15s ease;
+      transform: scale(1.1);
+    }
+  }
+
+  .lf--submit {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    
+    background: linear-gradient(
+      to right,
+      $green-dark,
+      $green-light
+    );
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: .75em;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(black, .2);
+    
+    &:focus {
+      outline: none;
+      transition: transform .15s ease;
+      transform: scale(1.1);
+    }
+  }
+
+.lf--forgot {
+  margin-top: 1em;
+  color: $green-light;
+  font-size: .65em;
+  text-align: center;
+  position: relative;
+}
+
+::placeholder { color: $gray; }
